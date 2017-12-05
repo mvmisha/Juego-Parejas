@@ -112,7 +112,7 @@ function clickCarta(x) {
                 click2id = "";
                 click = 1;
             }
-        }, 250);
+        }, 400);
     }
 }
 
