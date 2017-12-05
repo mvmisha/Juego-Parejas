@@ -14,7 +14,7 @@ function generateArray() {
     fotos = ["img/NSX.png", "img/R34.png", "img/STI.png", "img/SUPRA.png", "img/HAKOSUKA.png", "img/GTR.png", "img/CIVIC.png", "img/S2000.png", "img/BRZ.png", "img/SILVIA.png"];
     fotos = fotos.slice(0, parejas);
     fotos = fotos.concat(fotos);
-    //shuffleFotos(fotos);
+    shuffleFotos(fotos);
 
 }
 
@@ -112,7 +112,7 @@ function clickCarta(x) {
                 click2id = "";
                 click = 1;
             }
-        }, 400);
+        }, 250);
     }
 }
 
