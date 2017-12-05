@@ -1,109 +1,12 @@
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script >
-        var dificultad = 1000;
-        var click=1
-        var click1, click2, click1id, click2id, correcto=0;
-        var cartaspulsadas=0;
-        var fotos=["NSX.png", "R34.png", "STI.png", "SUPRA.png", "HAKOSUKA.png", "GTR.png","NSX.png", "R34.png", "STI.png", "SUPRA.png", "HAKOSUKA.png", "GTR.png"];
-        function generacionaleatoria(a) {
-            for (var i = a.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [a[i], a[j]] = [a[j], a[i]];
-            }
-            return a;
-        }
-        generacionaleatoria(fotos);
-        console.log(fotos);
-        /*function volverajugar(){
-            generacionaleatoria(fotos);
-            console.log(fotos);
-            for (var i=0; i<12;i++){
-                document.getElementById(i).onclick=function onclick(event){clickcarta(this.id)};
-                document.getElementById(i).src="trasera.png";
-            }
-        }*/
-        function clickcarta(x){
-            cartaspulsadas++; console.log("cartas pulsadas: " +cartaspulsadas)
-            document.getElementById("textocambiante").innerHTML="Llevas " + cartaspulsadas +  " cartas pulsadas"
-            document.getElementById(x).src = fotos[(x-1)];
-
-            if(click==1){
-                click1=document.getElementById(x).src;
-                click1id=x;
-                console.log("click1: " + document.getElementById(x).src);
-                document.getElementById(click1id).onclick="";
-                click++;
-            } else if (click==2){
-                click2=document.getElementById(x).src;
-                click2id=x;
-                console.log("click2: " + document.getElementById(x).src);
-                setTimeout(function(){
-                    if (click1==click2){
-                    console.log("Es una pareja completada.")
-                    
-                    document.getElementById(click1id).onclick="";
-                    document.getElementById(click2id).onclick="";
-                    //correcto++;
-                    //console.log(correcto);
-                    click1=""; click2="";click1id=""; click2id=""; click=1;
-                    /*if(correcto==6){
-                            document.getElementById("textocambiante").innerHTML="Has completado todas las parejas, haz click para volver a jugar.";
-                            document.getElementById("textocambiante").onclick=function onclick(event){clickcarta(this.id)};;
-                        }*/
-
-                    } else if (click1!=click2) {
-                    console.log("No es una pareja completada.")
-                    document.getElementById(click1id).src="trasera.png";
-                    //document.getElementById(click1id).onclick="clickcarta(click1id)";
-                    document.getElementById(click1id).onclick=function onclick(event){clickcarta(this.id)};
-                        
-
-                    document.getElementById(click2id).src="trasera.png";
-                    //document.getElementById(click2id).onclick="clickcarta(click1id)";
-                    document.getElementById(click2id).onclick=function onclick(event){volverajugar()};
-
-                    click1=""; click2="";click1id=""; click2id=""; click=1;
-                    }
-                }, 750);
-                    
-            }
-        }
-</script>
-
-</head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style6.css">
+    </head>
     <body>
-    <div class="header">
-         <h1>JDM LEGENDS</h1>
-         <h2 id="textocambiante">Click en una carta para empezar</h2>
-         
-    </div> 
-    <div class="row">
-      <div class="column">
-        <img id="1"  onclick="clickcarta(this.id);" src="trasera.png" style="width:100%">
-        <img id="2"  onclick="clickcarta(this.id);" src="trasera.png" style="width:100%">
-      </div> 
-      <div class="column">
-        <img id="3" onclick="clickcarta(this.id);" src="trasera.png" style="width:100%">
-        <img id="4" onclick="clickcarta(this.id);" src="trasera.png" style="width:100%">
-      </div> 
-      <div class="column">
-        <img id="5" onclick="clickcarta(this.id);" src="trasera.png" style="width:100%">
-        <img id="6" onclick="clickcarta(this.id);" src="trasera.png" style="width:100%">
-      </div> 
-      <div class="column">
-        <img id="7" onclick="clickcarta(this.id);" src="trasera.png" style="width:100%">
-        <img id="8" onclick="clickcarta(this.id);" src="trasera.png" style="width:100%">
-      </div>
-      <div class="column">
-        <img id="9"  onclick="clickcarta(this.id);" src="trasera.png" style="width:100%">
-        <img id="10" onclick="clickcarta(this.id);" src="trasera.png" style="width:100%">
-      </div>
-      <div class="column">
-        <img id="11" onclick="clickcarta(this.id);"  src="trasera.png" style="width:100%">
-        <img id="12" onclick="clickcarta(this.id);"  src="trasera.png" style="width:100%">
-      </div>
-    </div>
+        <div class="header">
+             <h1 >JDM LEGENDS</h1>
+             <h2 id="textocambiante">Click en una carta para empezar</h2>
+        </div> 
     </body>
+    <script type="text/javascript" src="script.js"></script>
 </html>

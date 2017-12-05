@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-image: url("../img/fond.jpg");
+}
+h1 { 
+    font-family: 'Enriqueta', arial, serif;
+    line-height: 1.25; 
+    margin: 0 0 10px;
+    font-size: 40px; 
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px white;
+}
+h2 { 
+    font-family: 'Enriqueta', arial, serif;
+    line-height: 1.25; 
+    margin: 0 0 10px;
+    Font-size: 20px; 
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px white;
+}
+
+.header {
+    text-align: center;
+    padding: 15px;
+}
+
+.column {
+    float: left;
+    width: 10%;
+    padding:3px;
+}
+
+.row{
+        margin-left: 6%
+} 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
+
+
